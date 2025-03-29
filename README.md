@@ -1,1 +1,1 @@
-# **SustainaWare**: AI-Powered-Waste-Classification-and-Recycling-System
+# SustainaWare--AI-Powered-Waste-Classification-and-Recycling-System
