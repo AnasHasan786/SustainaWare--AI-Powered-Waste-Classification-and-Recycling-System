@@ -4,11 +4,11 @@
 
 SustainaWare is an **AI-powered waste classification and recycling assistance system** that leverages **deep learning, NLP, and a structured database** to improve waste management efficiency. It enables users to **automatically classify waste types, receive real-time recycling instructions, and interact via text-based queries** for better disposal and sustainability practices.
 
-This project integrates **YOLOv8 for waste classification**, a **FastAPI backend** for user management and waste tracking, and an **NLP-powered chatbot to answer recycling-related questions.
+This project integrates **YOLOv8 for waste classification**, a **FastAPI backend** for user management and waste tracking, and an **NLP-powered chatbot** to answer recycling-related questions.
 
 ### **🚀 Why SustainaWare?**
 
-Improper waste disposal leads to **environmental damage, pollution, and recycling inefficiencies. **SustainaWare provides an **automated, AI-driven solution** that assists individuals, businesses, and organizations in making informed waste disposal decisions.
+Improper waste disposal leads to **environmental damage, pollution, and recycling inefficiencies.** SustainaWare provides an **automated, AI-driven solution** that assists individuals, businesses, and organizations in making informed waste disposal decisions.
 
 ### **🌟 Key Features**
 
@@ -18,11 +18,12 @@ Improper waste disposal leads to **environmental damage, pollution, and recyclin
 - **Dynamic User Interaction**: Users can **upload images, receive real-time classification results, and get proper disposal guidelines.**
 - **Continuous Model Improvement**: Integrates **user feedback** to enhance classification accuracy and expand dataset quality.
 
-### **🌱 Impact & Goals**
+### 🌱 Impact & Goals  
+📌 **Promote responsible waste disposal** to reduce pollution and improve recycling rates.  
+📌 **Enhance AI-driven waste classification** for better automation in smart waste management.  
+📌 **Encourage sustainability** by making waste disposal **simple, accessible, and tech-driven.**  
 
-📌 **Promote responsible waste disposal** to reduce pollution and improve recycling rates.
-📌 **Enhance AI-driven waste classification** for better automation in smart waste management.
-📌 **Encourage sustainability** by making waste disposal **simple, accessible, and tech-driven.**
+
 
 ---
 
