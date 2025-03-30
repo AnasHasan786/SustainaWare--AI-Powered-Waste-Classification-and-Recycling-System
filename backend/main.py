@@ -14,11 +14,9 @@ from .routers.nlp import router as nlp_router
 # Initialize FastAPI app
 app = FastAPI(title="SustainaWare API", version="1.0.0")
 
-# Configure CORS middleware
-origins = os.getenv("CORS_ALLOW_ORIGINS", "*").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -44,4 +42,11 @@ app.include_router(waste_router, prefix="/api", tags=["Waste Management"])
 app.include_router(feedback_router, prefix="/api", tags=["Feedback"])
 app.include_router(classification_router, prefix="/api/waste", tags=["Classification"])
 app.include_router(waste_stats_router, prefix="/api", tags=["Waste Statistics"])
-app.include_router(nlp_router, prefix="/api", tags=["NLP"])  
+app.include_router(nlp_router, prefix="/api", tags=["NLP"])
+
+# Add the Cross-Origin-Opener-Policy header to all responses
+@app.middleware("http")
+async def add_coop_header(request, call_next):
+    response = await call_next(request)
+    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
+    return response
