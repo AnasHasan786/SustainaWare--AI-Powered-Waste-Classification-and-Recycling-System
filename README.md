@@ -68,34 +68,64 @@ The architecture ensures **real-time classification, intelligent query handling,
 
 ---
 
-## 🖼️ System Architecture Diagram
+# 🏗️ SustainaWare System Architecture
 
-```mermaid
-graph TD;
-    A[User] -->|Uploads Image or Queries| B[Frontend (React.js)]
-    B -->|Send Image to API| C[FastAPI Backend]
-    B -->|Send Text Query| G[NLP Query Module]
-    
-    subgraph "🔹 Image Classification"
-        C -->|Process Image| D[YOLOv8 Model]
-        D -->|Classified Waste| E[PostgreSQL Database]
-        E -->|Send Classification Result| B
-    end
-    
-    subgraph "🔹 Query Handling"
-        G -->|Check Similarity| H[SentenceTransformer]
-        G -->|Generate Response if Needed| I[DistilBERT QA Model]
-        H -->|Matched Topic| B
-        I -->|Dynamically Generate Answer| B
-    end
-    
-    subgraph "🔹 User Feedback & Learning"
-        B -->|Submit Feedback| J[Feedback Module]
-        J -->|Store Feedback| E
-        J -->|Update Model Periodically| D
-    end
+## 📌 Overview
+SustainaWare is an **AI-powered waste classification and recycling guidance system** that integrates **machine learning**, **natural language processing (NLP)**, and a **FastAPI backend** to classify waste and provide recycling information.
 
+### **🛠️ Key Components**
+- **Frontend (React.js)** → User Interface for interactions  
+- **Backend (FastAPI)** → Manages API requests and ML models  
+- **Image Classification (YOLOv8)** → Recognizes waste categories  
+- **Query Handling (NLP Models)** → Answers user queries  
+- **Database (PostgreSQL)** → Stores waste classification & feedback  
+- **Feedback System** → Improves model performance over time  
 
+---
+
+## 🖥️ System Architecture
+
+```plaintext
+📌 User
+   ├── Uploads an Image  
+   ├── Submits a Text Query  
+   └── Provides Feedback  
+        |
+        v
+🌍 Frontend (React.js)
+   ├── Handles User Interaction  
+   ├── Sends Requests to Backend  
+   ├── Displays Results  
+   └── Stores Chat History  
+        |
+        v
+🚀 FastAPI Backend
+   ├── Processes API Requests  
+   ├── Routes Image & Text Queries  
+   ├── Fetches Results from ML Models  
+   └── Returns Processed Response  
+        |
+        ├── 🖼️ Image Processing  
+        |     ├── YOLOv8 Model  
+        |     ├── Classifies Waste Category  
+        |     └── Stores in PostgreSQL  
+        |
+        ├── 🧠 Query Processing  
+        |     ├── SentenceTransformer (Finds Similarity)  
+        |     ├── DistilBERT Model (Generates Answer)  
+        |     └── Returns Response to User  
+        |
+        ├── 📦 Database (PostgreSQL)  
+        |     ├── Stores Classified Waste Data  
+        |     ├── Stores User Queries & Responses  
+        |     ├── Saves User Feedback  
+        |     └── Logs Chat History  
+        |
+        └── 🔄 Feedback & Model Training  
+              ├── User Feedback Improves Accuracy  
+              ├── Updates Classification Model  
+              ├── Enhances Query Response Handling  
+              └── Periodically Retrains Models  
 
 
 
