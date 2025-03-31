@@ -4,12 +4,12 @@ import os
 
 # Import routers
 from .routers.auth import router as auth_router
-from .routers.users import router as users_router
 from .routers.waste import router as waste_router
 from .routers.feedback import router as feedback_router
 from .routers.waste_classification import router as classification_router
 from .routers.waste_statistics import router as waste_stats_router
 from .routers.nlp import router as nlp_router  
+from .routers.chat_logs import router as chat_router
 
 # Initialize FastAPI app
 app = FastAPI(title="SustainaWare API", version="1.0.0")
@@ -37,16 +37,9 @@ async def health_check():
 
 # Register Routers
 app.include_router(auth_router, prefix="/api", tags=["Authentication"])
-app.include_router(users_router, prefix="/api", tags=["Users"])
 app.include_router(waste_router, prefix="/api", tags=["Waste Management"])
 app.include_router(feedback_router, prefix="/api", tags=["Feedback"])
 app.include_router(classification_router, prefix="/api/waste", tags=["Classification"])
 app.include_router(waste_stats_router, prefix="/api", tags=["Waste Statistics"])
 app.include_router(nlp_router, prefix="/api", tags=["NLP"])
-
-# Add the Cross-Origin-Opener-Policy header to all responses
-@app.middleware("http")
-async def add_coop_header(request, call_next):
-    response = await call_next(request)
-    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
-    return response
+app.include_router(chat_router, prefix="/api", tags=["Chat Logs"])
