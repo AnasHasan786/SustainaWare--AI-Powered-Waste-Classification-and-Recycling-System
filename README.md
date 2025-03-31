@@ -2,9 +2,7 @@
 
 ### **🔍 Overview**
 
-SustainaWare is an **AI-powered waste classification and recycling assistance system** that leverages **deep learning, NLP, and a structured database** to improve waste management efficiency. It enables users to **automatically classify waste types, receive real-time recycling instructions, and interact via text-based queries** for better disposal and sustainability practices.
-
-This project integrates **YOLOv8 for waste classification**, a **FastAPI backend** for user management and waste tracking, and an **NLP-powered chatbot** to answer recycling-related questions.
+<p align="justify">SustainaWare is an <b>AI-powered waste classification and recycling assistance system</b> that leverages <b>deep learning, NLP, and a structured database</b> to improve waste management efficiency. It enables users to <b>automatically classify waste types, receive real-time recycling instructions, and interact via text-based queries</b> for better disposal and sustainability practices. This project integrates <b>YOLOv8 for waste classification</b>, a <b>FastAPI backend</b> for user management and waste tracking, and an <b>NLP-powered chatbot</b> to answer recycling-related questions.</p>
 
 ### **🚀 Why SustainaWare?**
 
@@ -23,16 +21,16 @@ Improper waste disposal leads to **environmental damage, pollution, and recyclin
 📌 **Enhance AI-driven waste classification** for better automation in smart waste management.  
 📌 **Encourage sustainability** by making waste disposal **simple, accessible, and tech-driven.**  
 
-
+---
 
 ## 🛠️ Tech Stack – The Power Behind SustainaWare
 
 SustainaWare isn’t just another waste management tool—it’s an **AI-driven ecosystem** that blends **computer vision, natural language processing, and smart database management** to create a seamless user experience.
 
 ### AI & Machine Learning
-🚀 At its core, the system is powered by **YOLOv8**, a cutting-edge object detection model that classifies waste into **8 distinct categories** with precision. The training process wasn’t just about throwing data at a model; we **fine-tuned YOLOv8 over 50 epochs**, optimizing performance while keeping computational efficiency in check. The dataset? **Sourced from Roboflow**, ensuring high-quality labeled images for accurate detection.
+<p>🚀 At its core, the system is powered by <b>YOLOv8</b>, a cutting-edge object detection model that classifies waste into <b>8 distinct categories</b> with precision. The training process wasn’t just about throwing data at a model; we <b>fine-tuned YOLOv8 over 50 epochs</b>, optimizing performance while keeping computational efficiency in check. The dataset? <b>Sourced from Roboflow</b>, ensuring high-quality labeled images for accurate detection.</p>
 
-💡 But classification alone isn’t enough—users often have **questions** about waste disposal. That’s where our **NLP-powered chatbot** steps in. Instead of relying on generic responses, we integrated **DistilBERT and Sentence Transformers**, enabling the chatbot to **understand and process user queries intelligently**. Whether it's _"Can I recycle this plastic?"_ or _"How do I dispose of electronic waste?"_, the system provides **context-aware answers** using **cosine similarity and QA models**.
+<p>💡 But classification alone isn’t enough—users often have <b>questions</b> about waste disposal. That’s where our <b>NLP-powered chatbot</b> steps in. Instead of relying on generic responses, we integrated <b>DistilBERT and Sentence Transformers</b>, enabling the chatbot to <b>understand and process user queries intelligently</b>. Whether it's _"Can I recycle this plastic?"_ or _"How do I dispose of electronic waste?"_, the system provides <b>context-aware answers</b> using <b>cosine similarity and QA models</b>.</p>
 
 ### Backend – The Brain of SustainaWare
 🖥️ Driving this AI powerhouse is our **FastAPI-based backend**, a **lightweight yet high-performance API layer** that efficiently handles:
@@ -55,6 +53,8 @@ The frontend is styled with **Tailwind CSS**, ensuring a **clean, modern, and re
 - **Git** – For version tracking and smooth collaboration.
 - **Restfox.dev** – For API testing, ensuring smooth debugging and performance optimization.
 
+---
+
 # 🏗️ System Architecture
 
 ## 📌 Overview
@@ -66,66 +66,64 @@ The **SustainaWare** system is designed for **waste classification and recycling
 
 The architecture ensures **real-time classification, intelligent query handling, and continuous learning** through user feedback.
 
----
+## 🌍 SustainaWare System Architecture
 
-# 🏗️ SustainaWare System Architecture
+SustainaWare is an **AI-powered waste classification system** that processes **both images and text queries** to provide **accurate waste management insights**. It integrates multiple components to ensure a seamless user experience, efficient data processing, and continuous model improvements.  
 
-## 📌 Overview
-SustainaWare is an **AI-powered waste classification and recycling guidance system** that integrates **machine learning**, **natural language processing (NLP)**, and a **FastAPI backend** to classify waste and provide recycling information.
+### 🚀 **How It Works? (Step-by-Step Flow)**  
 
-### **🛠️ Key Components**
-- **Frontend (React.js)** → User Interface for interactions  
-- **Backend (FastAPI)** → Manages API requests and ML models  
-- **Image Classification (YOLOv8)** → Recognizes waste categories  
-- **Query Handling (NLP Models)** → Answers user queries  
-- **Database (PostgreSQL)** → Stores waste classification & feedback  
-- **Feedback System** → Improves model performance over time  
+🧑‍💻 **1. User Interaction** 
 
----
+🔹 The user **uploads an image** or **sends a text query** via the frontend.  
+🔹 They can also access the **Dashboard** to view real-time **waste statistics**.  
 
-## 🖥️ System Architecture
+🌐 **2. Frontend (React.js) → Backend (FastAPI)**  
 
-```plaintext
-📌 User
-   ├── Uploads an Image  
-   ├── Submits a Text Query  
-   └── Provides Feedback  
-        |
-        v
-🌍 Frontend (React.js)
-   ├── Handles User Interaction  
-   ├── Sends Requests to Backend  
-   ├── Displays Results  
-   └── Stores Chat History  
-        |
-        v
-🚀 FastAPI Backend
-   ├── Processes API Requests  
-   ├── Routes Image & Text Queries  
-   ├── Fetches Results from ML Models  
-   └── Returns Processed Response  
-        |
-        ├── 🖼️ Image Processing  
-        |     ├── YOLOv8 Model  
-        |     ├── Classifies Waste Category  
-        |     └── Stores in PostgreSQL  
-        |
-        ├── 🧠 Query Processing  
-        |     ├── SentenceTransformer (Finds Similarity)  
-        |     ├── DistilBERT Model (Generates Answer)  
-        |     └── Returns Response to User  
-        |
-        ├── 📦 Database (PostgreSQL)  
-        |     ├── Stores Classified Waste Data  
-        |     ├── Stores User Queries & Responses  
-        |     ├── Saves User Feedback  
-        |     └── Logs Chat History  
-        |
-        └── 🔄 Feedback & Model Training  
-              ├── User Feedback Improves Accuracy  
-              ├── Updates Classification Model  
-              ├── Enhances Query Response Handling  
-              └── Periodically Retrains Models  
+🔹 The **frontend sends API requests** to the backend.  
+🔹 The backend decides whether the request is **image-based** (processed by YOLOv8) or **text-based** (handled by the NLP module).  
+
+🖼️ **3. Image Processing (YOLOv8 Model)**  
+
+🔹 If an **image** is uploaded, the backend **routes it to YOLOv8** for classification.  
+🔹 The **classification results** are stored in the PostgreSQL **database** and sent back to the user.  
+
+🧠 **4. Text Processing (NLP Query Module)**  
+
+🔹 If a **text query** is received, the backend **routes it to the NLP module**.  
+🔹 **Sentence Transformer** checks for similarity with existing waste records.  
+🔹 If needed, **DistilBERT/Gemini** generates an informative response.  
+🔹 The processed answer is returned to the user.  
+
+📊 **5. Dashboard (Waste Statistics & Insights)** 
+
+🔹 Users can view **real-time waste classification analytics**.  
+🔹 The backend fetches **waste data from PostgreSQL** and processes it for the dashboard.  
+
+💡 **6. Feedback System & Model Retraining**  
+
+🔹 Users can **submit feedback** about classification accuracy.  
+🔹 Feedback is stored in the database and used for **continuous model improvement**.  
+
+### 🏗️ **System Components**  
+
+| 🏢 Component  | 🔥 Functionality |
+|--------------|----------------|
+| 🎨 **Frontend (React.js)** | User Interface, API Requests, Dashboard Display |
+| 🚀 **Backend (FastAPI)** | Routes Queries, Processes Data, Connects Components |
+| 🖼️ **YOLOv8 Model** | Classifies Waste from Images |
+| 🧠 **NLP Query Module** | Text Processing, Similarity Search, Response Generation |
+| 🛢️ **PostgreSQL Database** | Stores Waste Data, User Queries, Feedback |
+| 📊 **Dashboard** | Displays Waste Statistics and Insights |
+| 🔄 **Feedback System** | Collects User Feedback, Triggers Model Retraining |
+
+### 📌 **System Architecture Diagram**  
+
+🖼️ Below is the visual representation of the **SustainaWare System Architecture**: 
+
+<p align="center">
+  <img src="https://i.imgur.com/oAtVUMn.png" alt="System Architecture" width="600">
+</p>
+
 
 
 
