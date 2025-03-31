@@ -55,6 +55,46 @@ The frontend is styled with **Tailwind CSS**, ensuring a **clean, modern, and re
 - **Git** – For version tracking and smooth collaboration.
 - **Restfox.dev** – For API testing, ensuring smooth debugging and performance optimization.
 
+# 🏗️ System Architecture
+
+## 📌 Overview
+The **SustainaWare** system is designed for **waste classification and recycling guidance** using a **multi-stage AI-powered pipeline**. The architecture consists of three major layers:
+
+1️⃣ **Frontend (User Interaction)** → React.js-based interface  
+2️⃣ **Backend (FastAPI + ML Models)** → Core logic handling classification, NLP queries, and data management  
+3️⃣ **Database (PostgreSQL)** → Storing waste records, user interactions, and feedback  
+
+The architecture ensures **real-time classification, intelligent query handling, and continuous learning** through user feedback.
+
+---
+
+## 🖼️ System Architecture Diagram
+
+```mermaid
+graph TD;
+    A[User] -->|Uploads Image or Queries| B[Frontend (React.js)]
+    B -->|Send Image to API| C[FastAPI Backend]
+    B -->|Send Text Query| G[NLP Query Module]
+    
+    subgraph "🔹 Image Classification"
+        C -->|Process Image| D[YOLOv8 Model]
+        D -->|Classified Waste| E[PostgreSQL Database]
+        E -->|Send Classification Result| B
+    end
+    
+    subgraph "🔹 Query Handling"
+        G -->|Check Similarity| H[SentenceTransformer]
+        G -->|Generate Response if Needed| I[DistilBERT QA Model]
+        H -->|Matched Topic| B
+        I -->|Dynamically Generate Answer| B
+    end
+    
+    subgraph "🔹 User Feedback & Learning"
+        B -->|Submit Feedback| J[Feedback Module]
+        J -->|Store Feedback| E
+        J -->|Update Model Periodically| D
+    end
+
 
 
 
