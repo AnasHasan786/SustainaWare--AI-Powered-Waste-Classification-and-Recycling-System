@@ -94,12 +94,7 @@ SustainaWare is an **AI-powered waste classification system** that processes **b
 🔹 If needed, **DistilBERT/Gemini** generates an informative response.  
 🔹 The processed answer is returned to the user.  
 
-📊 **5. Dashboard (Waste Statistics & Insights)** 
-
-🔹 Users can view **real-time waste classification analytics**.  
-🔹 The backend fetches **waste data from PostgreSQL** and processes it for the dashboard.  
-
-💡 **6. Feedback System & Model Retraining**  
+💡 **5. Feedback System & Model Retraining**  
 
 🔹 Users can **submit feedback** about classification accuracy.  
 🔹 Feedback is stored in the database and used for **continuous model improvement**.  
@@ -113,7 +108,6 @@ SustainaWare is an **AI-powered waste classification system** that processes **b
 | 🖼️ **YOLOv8 Model** | Classifies Waste from Images |
 | 🧠 **NLP Query Module** | Text Processing, Similarity Search, Response Generation |
 | 🛢️ **PostgreSQL Database** | Stores Waste Data, User Queries, Feedback |
-| 📊 **Dashboard** | Displays Waste Statistics and Insights |
 | 🔄 **Feedback System** | Collects User Feedback, Triggers Model Retraining |
 
 ### 📌 **System Architecture Diagram**  
