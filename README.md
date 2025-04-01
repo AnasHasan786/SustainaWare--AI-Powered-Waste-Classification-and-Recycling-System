@@ -1,4 +1,4 @@
-# ♻️ SustainaWare - AI-Powered Waste Classification & Recycling System
+# **♻️ SustainaWare - AI-Powered Waste Classification & Recycling System**
 
 ### **🔍 Overview**
 
