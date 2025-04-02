@@ -117,7 +117,3 @@ SustainaWare is an **AI-powered waste classification system** that processes **b
 <p align="center">
   <img src="https://i.imgur.com/oAtVUMn.png" alt="System Architecture" width="600">
 </p>
-
-
-
-
