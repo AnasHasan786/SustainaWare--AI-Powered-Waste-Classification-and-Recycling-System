@@ -110,17 +110,6 @@ SustainaWare is an **AI-powered waste classification system** that processes **b
 | 🛢️ **PostgreSQL Database** | Stores Waste Data, User Queries, Feedback |
 | 🔄 **Feedback System** | Collects User Feedback, Triggers Model Retraining |
 
-### 🏗️ **System Components**  
-
-| 🏢 Component  | 🔥 Functionality |
-|--------------|----------------|
-| 🎨 **Frontend (React.js)** | User Interface, API Requests, Dashboard Display |
-| 🚀 **Backend (FastAPI)** | Routes Queries, Processes Data, Connects Components |
-| 🖼️ **YOLOv8 Model** | Classifies Waste from Images |
-| 🧠 **NLP Query Module** | Text Processing, Similarity Search, Response Generation |
-| 🛢️ **PostgreSQL Database** | Stores Waste Data, User Queries, Feedback |
-| 🔄 **Feedback System** | Collects User Feedback, Triggers Model Retraining |
-
 ### 📌 **System Architecture Diagram**  
 
 🖼️ Below is the visual representation of the **SustainaWare System Architecture**: 
@@ -192,6 +181,76 @@ A React.js-based frontend provides an interactive chat-style UI with:
 ### j) Continuous Learning
 - User-submitted images and labels are periodically reviewed.
 - The dataset is updated with validated feedbak for retraining, enabling the system to adapt and improve continuously.
+
+---
+
+## Installation
+
+Follow the steps below to set up and run SustainaWare on your local machine.
+
+### 1. Clone the Repository
+
+```bash
+https://github.com/AnasHasan786/SustainaWare--AI-Powered-Waste-Classification-and-Recycling-System.git
+cd SustainaWare--AI-Powered-Waste-Classification-and-Recycling-System
+```
+### 2. Backend Setup
+Navigate to the backend folder and set up a virtual environment
+
+```bash
+cd backend
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+    • On Windows:
+
+    ```bash
+    venv/Scripts/activate
+    ```
+
+    • On macOS/Linux:
+
+    ```bash
+    source venv/bin/activate
+    ```
+Install the backend dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the FastAPI development server:
+
+```bash
+fastapi dev main.py
+```
+
+The backend server will start on `http://127.0.0.1:8000/`
+
+### 3. Frontend Setup
+
+In a new terminal window, navigate to the frontend folder:
+
+```bash
+cd frontend
+```
+
+Install frontend dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+The frontend will typically be available at `http://localhost:5173/`
+
+### 4. Access the Application
+
+Once both servers are running, open your browser and visit the frontend URL (e.g. `http://localhost:5173/`) to use the application.
+
+
 
  
 
