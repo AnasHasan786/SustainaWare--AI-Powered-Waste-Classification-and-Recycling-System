@@ -135,7 +135,7 @@ The project integrates multiple technologies across the machine learning, backen
 🖼️ Below is the visual representation of the SustainaWare System Architecture: 
 
 <p align="center">
-  <img src="https://i.imgur.com/oAtVUMn.png" alt="System Architecture" width="600">
+  <img src="https://i.imgur.com/mlYlEsP.png" alt="System Architecture" width="600">
 </p>
 
 ## **⚙️ Installation Guide**
@@ -236,9 +236,13 @@ To continuously improve the performance, scalability, and intelligence of the sy
 ## **🧑‍💻 Author**
 
 Anas Hasan
+
 Final Year CSE-AIML Student
+
 E-mail: anas.hassan9417@gmail.com
+
 GitHub: [Check my Gihub profile](https://github.com/AnasHasan786)
+
 LinkedIn: [Visit my LinkedIn profile](https://www.linkedin.com/in/anas-hasan-a5546524b/)
 
 ## **📜 License**
