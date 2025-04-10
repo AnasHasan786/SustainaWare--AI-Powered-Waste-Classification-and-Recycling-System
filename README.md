@@ -235,14 +235,10 @@ To continuously improve the performance, scalability, and intelligence of the sy
 
 ## **🧑‍💻 Author**
 
-Anas Hasan
-
-Final Year CSE-AIML Student
-
-E-mail: anas.hassan9417@gmail.com
-
-GitHub: [Check my Gihub profile](https://github.com/AnasHasan786)
-
+Anas Hasan<br>
+Final Year CSE-AIML Student<br>
+E-mail: anas.hassan9417@gmail.com<br>
+GitHub: [Check my Gihub profile](https://github.com/AnasHasan786)<br>
 LinkedIn: [Visit my LinkedIn profile](https://www.linkedin.com/in/anas-hasan-a5546524b/)
 
 ## **📜 License**
