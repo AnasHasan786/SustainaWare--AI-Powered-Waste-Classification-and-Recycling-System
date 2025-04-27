@@ -140,7 +140,7 @@ The project integrates multiple technologies across the machine learning, backen
 
 ## **📽️ Demonstration Video**
 
-<video controls src="SustainaWare.mp4" title="Title"></video>
+[Watch the demo video here](https://vimeo.com/1076951301)
 
 
 ## **⚙️ Installation Guide**
