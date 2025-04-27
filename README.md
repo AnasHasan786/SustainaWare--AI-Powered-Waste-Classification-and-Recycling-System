@@ -140,8 +140,7 @@ The project integrates multiple technologies across the machine learning, backen
 
 ## **📽️ Demonstration Video**
 
-[![Watch the Demo Video](https://via.placeholder.com/800x400.png?text=Watch+Demo+Video)](https://vimeo.com/1076951301)
-
+[![Watch the Demo Video](https://vumbnail.com/1076951301.jpg)](https://vimeo.com/1076951301)
 
 ## **⚙️ Installation Guide**
 
