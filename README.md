@@ -11,8 +11,8 @@ An AI-powered platform that combines Object Detection, Natural Language Processi
 5. [📊 Dataset Details](#-dataset-details)
 6. [🛠️ Tech Stack – The Power Behind SustainaWare](#️-tech-stack--the-power-behind-sustainaware)
 7. [🏗️ System Architecture](#️-system-architecture)
-8. [⚙️ Installation Guide](#️-installation-guide)
-9. [🧪 How it Works](#-how-it-works)
+8. [📽️ Demonstration Video](#️-demonstration-video)
+9. [⚙️ Installation Guide](#️-installation-guide)
 10. [📈 Results and Model Evaluation](#-results-and-model-evaluation)
 11. [🚀 Future Enhancements](#-future-enhancements)
 12. [🧑‍💻 Author](#-author)
@@ -138,6 +138,11 @@ The project integrates multiple technologies across the machine learning, backen
   <img src="https://i.imgur.com/mlYlEsP.png" alt="System Architecture" width="600">
 </p>
 
+## **📽️ Demonstration Video**
+
+<video controls src="SustainaWare.mp4" title="Title"></video>
+
+
 ## **⚙️ Installation Guide**
 
 Follow the steps below to set up and run SustainaWare on your local machine.
@@ -205,16 +210,6 @@ The frontend will typically be available at `http://localhost:5173/`
 ### 4. Access the Application
 
 Once both servers are running, open your browser and visit the frontend URL (e.g. `http://localhost:5173/`) to use the application.
-
-## **🧪 How it Works**
-
-1. User uploads image via frontend.
-2. Image is sent to the FastAPI backend.
-3. YOLOv8 model detects and classifies the waste item.
-4. Classification info + recycling guidance is fetched from DB.
-5. User can also ask text-based recycling queries.
-6. NLP model processes the text and return accurate response.
-7. User gives feedback - stored in DB.
 
 ## **📈 Results and Model Evaluation**
 
